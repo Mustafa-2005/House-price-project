@@ -20,10 +20,16 @@ The application is structured into three main layers:
 Frontend: Collects property features, validates inputs, and queries the backend.
 Backend: Exposes endpoints, validates types using Pydantic, and handles inference.
 Machine Learning Pipeline: Preprocesses unstructured inputs (scales numeric features, maps categorical columns, imputes missing values) and outputs the predicted valuation using a trained Random Forest Regressor.
+
+---
+
 ### Tech Stack
 Frontend: React, TypeScript, Vite, React Router
 Backend: FastAPI, Pydantic, Uvicorn, pytest
 Machine Learning: Python, scikit-learn, Pandas, NumPy, Joblib, Matplotlib, Seaborn
+
+---
+
 ### Project Structure
 This directory tree reflects the working path configuration of both the backend import pathways and frontend entry point files:
 ```
