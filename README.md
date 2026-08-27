@@ -1,7 +1,3 @@
-Here is the updated, corrected README.md file. It is precisely aligned with your working directory structure, your corrected Python import configuration, and the updated React-Vite frontend files.
-
-You can copy and paste this directly into your root README.md file:
-
 # House Price Prediction — End-to-End ML Web App
 
 This repository contains a complete, production-ready machine learning application designed to predict residential property prices in India. The project includes a data processing and model training pipeline, a serving API built with FastAPI, and an interactive user interface built with React, TypeScript, and Vite.
