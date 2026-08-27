@@ -20,13 +20,13 @@ The application is structured into three main layers:
 Frontend: Collects property features, validates inputs, and queries the backend.
 Backend: Exposes endpoints, validates types using Pydantic, and handles inference.
 Machine Learning Pipeline: Preprocesses unstructured inputs (scales numeric features, maps categorical columns, imputes missing values) and outputs the predicted valuation using a trained Random Forest Regressor.
-Tech Stack
+### Tech Stack
 Frontend: React, TypeScript, Vite, React Router
 Backend: FastAPI, Pydantic, Uvicorn, pytest
 Machine Learning: Python, scikit-learn, Pandas, NumPy, Joblib, Matplotlib, Seaborn
-Project Structure
+### Project Structure
 This directory tree reflects the working path configuration of both the backend import pathways and frontend entry point files:
-
+```
 house-price-project/
 ├── backend/
 │   ├── .venv/                         # Local Python virtual environment
@@ -68,7 +68,8 @@ house-price-project/
 │   └── house_price_model.ipynb        # Model analysis and training notebook
 ├── .gitignore                         # Build files/cache exclusions
 └── README.md                          # Documentation
-Dataset Link & Download Instructions
+```
+### Dataset Link & Download Instructions
 The system is trained on the House Price dataset by Juhi Bhojani on Kaggle. It contains approximately 187,000 real estate listings in India.
 
 To Download:
