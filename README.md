@@ -16,6 +16,7 @@ The application is structured into three main layers:
          │
          ▼  (Loads via Joblib)
 [ scikit-learn Pipeline (preprocessing + model) ]
+```
 Frontend: Collects property features, validates inputs, and queries the backend.
 Backend: Exposes endpoints, validates types using Pydantic, and handles inference.
 Machine Learning Pipeline: Preprocesses unstructured inputs (scales numeric features, maps categorical columns, imputes missing values) and outputs the predicted valuation using a trained Random Forest Regressor.
