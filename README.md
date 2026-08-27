@@ -134,22 +134,23 @@ Ensure the virtual environment is active, then run:
 ```
 pytest
 ```
-3. Frontend Setup
+## 3. Frontend Setup
 Navigate to the frontend directory, install npm dependencies, and start the Vite development server bound to all local network interfaces (crucial for resolving localhost network routing on Windows):
-
+```
 cd frontend
 
-### Install dependencies safely
-```
+# Install dependencies safely
 npm install --legacy-peer-deps
-```
-### Start the server bound to all adapters
-```
+
+# Start the server bound to all adapters
+
 npm run dev -- --host
 ```
 The React development server will start and be accessible at http://localhost:5173/ or your physical local IP address (e.g., http://192.168.1.4:5173/).
 
-### Model Metrics & Evaluation
+---
+
+## Model Metrics & Evaluation
 The target price variable was transformed using a natural log scale np.log1p() during training to mitigate extreme positive skewness. During evaluation and serving, predictions are converted back to standard rupee values via np.expm1().
 
 Below are the evaluation results measured on the unseen test set (20% split):
@@ -160,20 +161,24 @@ R
  Score
 Random Forest Regressor	2,150,000.00	4,890,000.00	0.8142
 Linear Regression (Baseline)	5,420,000.00	9,120,000.00	0.5218
-API Reference & Example
+
+---
+
+## API Reference & Example
 Check API Status
 GET /health
 
 Response (200 OK):
-
+```
 {
   "status": "ok"
 }
-Request Property Price Prediction
+```
+## Request Property Price Prediction
 POST /predict
 
 Example Request (curl):
-
+```
 curl -X 'POST' \
   'http://localhost:8000/predict' \
   -H 'Content-Type: application/json' \
@@ -188,8 +193,10 @@ curl -X 'POST' \
   "ownership": "Freehold",
   "facing": "North"
 }'
+```
 Response (200 OK):
-
+```
 {
   "predicted_price": 5420000.0
 }
+```
