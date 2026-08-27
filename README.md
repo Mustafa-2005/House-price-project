@@ -23,14 +23,14 @@ Machine Learning Pipeline: Preprocesses unstructured inputs (scales numeric feat
 
 ---
 
-### Tech Stack
+## Tech Stack
 Frontend: React, TypeScript, Vite, React Router
 Backend: FastAPI, Pydantic, Uvicorn, pytest
 Machine Learning: Python, scikit-learn, Pandas, NumPy, Joblib, Matplotlib, Seaborn
 
 ---
 
-### Project Structure
+## Project Structure
 This directory tree reflects the working path configuration of both the backend import pathways and frontend entry point files:
 ```
 house-price-project/
@@ -75,28 +75,42 @@ house-price-project/
 ├── .gitignore                         # Build files/cache exclusions
 └── README.md                          # Documentation
 ```
-### Dataset Link & Download Instructions
+
+---
+
+## Dataset Link & Download Instructions
 The system is trained on the House Price dataset by Juhi Bhojani on Kaggle. It contains approximately 187,000 real estate listings in India.
 
-### To Download:
+---
+
+## To Download:
 Download the dataset directly from Kaggle.
 Unzip the file and place house_prices.csv into your project structure at: notebooks/data/house_prices.csv
 
-### Environment Variables
-Backend Configuration
-Create a .env file in the backend/ directory:
+---
 
+## Environment Variables
+
+### Backend Configuration
+
+Create a .env file in the backend/ directory:
 Variable	Type	Default	Description
 MODEL_PATH	String	models/house_price.pkl	Path to the saved serialization pipeline
-Frontend Configuration
+
+### Frontend Configuration
+
 Create a .env file in the frontend/ directory:
 
 Variable	Type	Default	Description
 VITE_API_BASE_URL	String	http://localhost:8000	Target URL of the serving FastAPI backend
-Setup & Installation
-1. Backend Setup
-Navigate to the backend directory, activate the virtual environment, install packages, and start the development server:
 
+---
+
+## Setup & Installation
+
+### 1. Backend Setup
+Navigate to the backend directory, activate the virtual environment, install packages, and start the development server:
+```
 cd backend
 
 # Create the virtual environment (if you haven't already)
@@ -114,11 +128,12 @@ pip install -r requirements.txt
 # Start the server
 python -m uvicorn main:app --reload --port 8000
 The interactive Swagger API documentation will be available at http://localhost:8000/docs.
-
-2. Run Backend Tests
+```
+## 2. Run Backend Tests
 Ensure the virtual environment is active, then run:
-
+```
 pytest
+```
 3. Frontend Setup
 Navigate to the frontend directory, install npm dependencies, and start the Vite development server bound to all local network interfaces (crucial for resolving localhost network routing on Windows):
 
