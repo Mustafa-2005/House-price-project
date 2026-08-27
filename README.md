@@ -72,10 +72,11 @@ house-price-project/
 ### Dataset Link & Download Instructions
 The system is trained on the House Price dataset by Juhi Bhojani on Kaggle. It contains approximately 187,000 real estate listings in India.
 
-To Download:
+### To Download:
 Download the dataset directly from Kaggle.
 Unzip the file and place house_prices.csv into your project structure at: notebooks/data/house_prices.csv
-Environment Variables
+
+### Environment Variables
 Backend Configuration
 Create a .env file in the backend/ directory:
 
@@ -117,14 +118,17 @@ Navigate to the frontend directory, install npm dependencies, and start the Vite
 
 cd frontend
 
-# Install dependencies safely
+### Install dependencies safely
+```
 npm install --legacy-peer-deps
-
-# Start the server bound to all adapters
+```
+### Start the server bound to all adapters
+```
 npm run dev -- --host
+```
 The React development server will start and be accessible at http://localhost:5173/ or your physical local IP address (e.g., http://192.168.1.4:5173/).
 
-Model Metrics & Evaluation
+### Model Metrics & Evaluation
 The target price variable was transformed using a natural log scale np.log1p() during training to mitigate extreme positive skewness. During evaluation and serving, predictions are converted back to standard rupee values via np.expm1().
 
 Below are the evaluation results measured on the unseen test set (20% split):
